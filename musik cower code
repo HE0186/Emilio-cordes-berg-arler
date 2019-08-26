@@ -4,7 +4,7 @@ void setup(){
 }
  void draw(){}
 void keyPressed(){
- 
+noStroke(); 
   fill(21,119,40);
   ellipse(random(0,500),random(0,700),60,60);
   
