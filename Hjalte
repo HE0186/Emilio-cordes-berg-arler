@@ -1,0 +1,37 @@
+
+void setup(){
+  size(600,600);
+  background(0);
+}
+void draw() {
+
+  noStroke();
+
+  int l = mouseX - pmouseX;
+  int h = mouseY - pmouseY;
+  
+  int start_x = pmouseX;
+  int start_y = pmouseY;
+  
+  if (mouseX < pmouseX) {
+    start_x = mouseX;
+    start_y = mouseY;
+    
+    h = -h;
+  }
+  
+  l = abs(l);
+  
+  if (l > 0) {
+    float f = (float)h / (float)l;
+  
+    float step = min(1.0, abs(1.0/f));
+  
+    for (float i = 0; i < l; i += step) {
+      ellipse(start_x + i, start_y + i * f, 10, 10);
+    }
+  }
+}
+void mousePressed(){
+  background(0);
+}
