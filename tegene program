@@ -1,7 +1,13 @@
-float thiccnes = 10;
+float thiccnes = 1;
+int red_color = color(200, 20, 20);
+int gren_color = color(20, 200, 20);
+int blue_color = color(20, 20, 200);
+int black_color = color(0,0,0);
+int erace_color = color(255, 255, 255);
+int color_;
 
 void setup(){
-  size(600,600);
+  size(1000,1000);
   background(255,255,255);
 }
 void draw(){
@@ -20,11 +26,36 @@ void draw(){
       background(255,255,255);
     }
   }
+  
+  if (keyPressed) {
+    if (key == 'r') {
+      color_ = red_color;
+    }
+  }
+   if (keyPressed) {
+    if (key == 'g') {
+      color_ = gren_color;
+    }
+  }
+    if (keyPressed) {
+    if (key == 'b') {
+      color_ = blue_color;
+    }
+  }
+  if (keyPressed) {
+    if (key == 's') {
+      color_ = black_color;
+    }
+  }
+  if (keyPressed) {
+    if (key == 'e') {
+      color_ = erace_color;
+    }
+  }
+   
 }
-  
-  
-  
 void mouseDragged() {
+  stroke(color_);
   strokeWeight(thiccnes);  
   line(mouseX, mouseY, pmouseX, pmouseY);
   
