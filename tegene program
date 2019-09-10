@@ -6,7 +6,7 @@ void setup(){
 }
 void draw(){
   if (keyPressed) {
-    if (key == ',' && thiccnes > 0 ) {
+    if (key == ',' && thiccnes > 1 ) {
       thiccnes--;
     }
   }
