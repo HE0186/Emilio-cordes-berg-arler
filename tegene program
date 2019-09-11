@@ -71,25 +71,3 @@ void mouseDragged() {
   line(mouseX, mouseY, pmouseX, pmouseY);
   
 }
-    if (key == 'b') {
-      color_ = blue_color;
-    }
-  }
-  if (keyPressed) {
-    if (key == 's') {
-      color_ = black_color;
-    }
-  }
-  if (keyPressed) {
-    if (key == 'e') {
-      color_ = erace_color;
-    }
-  }
-   
-}
-void mouseDragged() {
-  stroke(color_);
-  strokeWeight(thiccnes);  
-  line(mouseX, mouseY, pmouseX, pmouseY);
-  
-}
