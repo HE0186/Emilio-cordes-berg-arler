@@ -4,20 +4,21 @@ float d10 = (random(1,10));
 float d8 = (random(1,8));
 float d6 = (random(1,6));
 float d4 = (random(1,4));
+float y = 0;
 
 
 void setup(){
   size(1000,1000);
   background(255,255,255);
   
-   fill(0);  
-ellipse(100, 100, 100, 100);
-ellipse(250, 100, 100, 100);  
-ellipse(400, 100, 100, 100);
-ellipse(550, 100, 100, 100);
-ellipse(700, 100, 100, 100);
-ellipse(850, 100, 100, 100);
-
+   fill(0); 
+  
+     y = 100;
+  while (y < width){
+    ellipse(y, 100, 100, 100);
+    y = y+ 150;
+   
+  }
 }
 
 void draw(){
