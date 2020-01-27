@@ -1,0 +1,36 @@
+float playerx = 350;
+float playery = 350;
+float speed = 10;
+float y = 0;
+ 
+void setup(){
+  size(1300,800);
+  
+}
+void draw(){
+  background(0);
+  noStroke();
+  rect(playerx-10, playery-10, 20, 20);
+  
+  float diff_x = mouseX - playerx;
+  float diff_y = mouseY - playery;
+  
+  playerx += diff_x * speed * 0.01;
+  playery += diff_y * speed * 0.01;
+
+ if (keyPressed) {
+    if (key == ' ') {
+      playerx = mouseX ;
+      playery = mouseY ;
+    }
+  }
+    
+  fill(228,0,224);
+  y = 20;
+  while (y < height){
+    circle(100, y, 55);
+    y = y+ 80;
+
+  }
+}
+
